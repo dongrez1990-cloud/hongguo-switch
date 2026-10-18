@@ -7,10 +7,10 @@
 
 | 项 | 值 |
 |---|---|
-| 版本 | **v1.0.0（build176）** |
+| 版本 | **v1.1.0（build180）** |
 | 平台 | Nintendo Switch 自制程序（libnx + borealis + mpv / deko3d） |
 | 许可证 | **GPL-3.0**（工程衍生自 wiliwili 的 borealis 集成方式，wiliwili 为 GPLv3） |
-| 最后真机验证 | 2026-10-16（本轮改动均由用户真机确认） |
+| 最后真机验证 | 2026-10-18（179 播放恢复、180 历史恢复，均由用户真机确认） |
 | 主机测试 | 19 套件，`app/src/tests/run.ps1`，**0 失败** |
 | 构建 | `scripts/build-hongguo.ps1`，**零警告零错误** |
 
