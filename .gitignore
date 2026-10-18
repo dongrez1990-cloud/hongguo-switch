@@ -1,0 +1,70 @@
+# ---- build output ----------------------------------------------------------
+# Everything produced by scripts/, and the scratch trees the toolchain uses.
+out/
+build/
+build-*/
+obj/
+*.o
+*.a
+*.so
+*.elf
+*.nro
+*.nsp
+*.nso
+*.nacp
+*.nca
+*.exefs
+*.romfs
+*.pak
+
+# ---- logs and diagnostics --------------------------------------------------
+*.log
+*.log.txt
+crash-*.log
+*.dmp
+build-logs/
+_hg_reqdiag*
+hg_reqdiag.exe
+
+# ---- local configuration and personal data ---------------------------------
+# The console-side settings file, and anything backed up from it.
+hongguo.cfg
+hongguo.cfg.*
+*.cfg.bak
+*.cfg.keep
+*.cfg.before-*
+.cfg
+# watch history / favourites / snapshot files written at runtime
+*.history
+*.fav
+*.favorites
+*.watchlist
+*.store
+# local HTTP caches
+_cache/
+_switchcache/
+
+# ---- the wiliwili checkout -------------------------------------------------
+# README: clone this yourself. It is 1.6 GB and its licence travels with it.
+upstream/
+
+# ---- source archives kept next to the working tree -------------------------
+# Source zips snapshot the tree; git already does that job.
+*-source.zip
+hongguo-*.zip
+*.zip
+
+# ---- editor / OS -----------------------------------------------------------
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- local toolchain placeholders ------------------------------------------
+# tools/bin holds hacbrewpack.exe (a Windows binary); it is not redistributed.
+tools/bin/
