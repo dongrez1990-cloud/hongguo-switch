@@ -1,0 +1,76 @@
+name: Bug report
+description: 报告一个可以复现的问题
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢报告。这个自制程序依赖**第三方在线接口**，所以同一个症状既可能是程序的问题，
+        也可能是接口变了。下面这几项能一次问清，省掉来回三轮。
+
+        **请不要**在 issue 里粘贴你的账号、token、cookie 之类的东西。
+
+  - type: input
+    id: build
+    attributes:
+      label: 你用的构建
+      description: 主页右上角或日志第一行能看到（例如 build176）；如果是自己编译的，写 commit 哈希。
+      placeholder: build176
+    validations:
+      required: true
+
+  - type: input
+    id: firmware
+    attributes:
+      label: 系统固件 / 大气层版本
+      description: 设置 → 主机信息里能看到。
+      placeholder: 固件 19.0.1 / Atmosphère 1.8.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: 在哪一步出问题
+      options:
+        - 启动 / 主页
+        - 封面加载
+        - 搜索 / 分类
+        - 详情页
+        - 选集页
+        - 播放（起播就失败）
+        - 播放中途
+        - 底座 / 掌机切换
+        - 休眠 / 唤醒
+        - 设置页 / 自检
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象
+      description: 发生了什么、你期望什么。**能看剧到第几集就停**这类信息特别有用。
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: 日志
+      description: |
+        `SD:/switch/hongguo.log` 的最后 50～100 行（每次启动追加，最新一次在文件末尾）。
+        如果程序崩溃，另附 `SD:/atmosphere/crash_reports/` 里最新的那份。
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认日志里没有账号/token/cookie 之类的内容
+          required: true
